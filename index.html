@@ -3,116 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marketing Workshop</title>
-  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/babel-standalone@6.26.0/babel.min.js"></script>
+  <title>3-Hour Marketing Workshop</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
-  <div id="root"></div>
-  <script type="text/babel">
-    function Header() {
-      return (
-        <header className="bg-blue-600 text-white py-6 text-center">
-          <h1 className="text-3xl font-bold">3-Hour Marketing Workshop</h1>
-          <p className="mt-2">Learn the essentials of marketing through theory and practical exercises!</p>
-        </header>
-      );
-    }
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-6 text-center">
+    <h1 class="text-3xl font-bold">3-Hour Marketing Workshop</h1>
+    <p class="mt-2 text-lg">Master marketing essentials through theory and hands-on exercises</p>
+  </header>
 
-    function TheorySection() {
-      return (
-        <section className="py-8 px-4">
-          <h2 className="text-2xl font-semibold text-center mb-6">Theory (1.5 Hours)</h2>
-          <div className="max-w-4xl mx-auto grid gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">1. Introduction to Marketing (15 mins)</h3>
-              <p>Definition: Marketing is the process of creating value and building customer relationships.</p>
-              <p>Types: Traditional (TV, print) vs. Digital (social media, SEO).</p>
-              <p>4Ps: Product, Price, Place, Promotion.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">2. Understanding Target Market & Segmentation (15 mins)</h3>
-              <p>Segmentation: Demographics, Psychographics, Behavioral, Geographic.</p>
-              <p>Create buyer personas to understand your audience.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">3. Marketing Strategies (20 mins)</h3>
-              <p>Inbound (content, SEO) vs. Outbound (ads, cold calls).</p>
-              <p>Explore content marketing, influencer marketing, social media, SEO/SEM.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">4. Marketing Funnel & Customer Journey (20 mins)</h3>
-              <p>Stages: Awareness → Interest → Decision → Action.</p>
-              <p>AIDA Model: Attention, Interest, Desire, Action.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">5. Branding & Positioning (10 mins)</h3>
-              <p>Branding: Creating a unique identity (logo, values).</p>
-              <p>Positioning: Differentiating from competitors with USP.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">6. Analytics and Metrics (10 mins)</h3>
-              <p>Track ROI, Conversion Rate, CTR, Bounce Rate.</p>
-              <p>Use data-driven insights to optimize campaigns.</p>
-            </div>
-          </div>
-        </section>
-      );
-    }
+  <!-- Theory Section -->
+  <section class="py-8 px-4">
+    <h2 class="text-2xl font-semibold text-center mb-6">Theory (1.5 Hours)</h2>
+    <div class="max-w-4xl mx-auto grid gap-6">
+      <!-- Introduction to Marketing -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">1. Introduction to Marketing (15 mins)</h3>
+        <p><strong>Definition:</strong> Marketing is the process of identifying, anticipating, and satisfying customer needs profitably.</p>
+        <p><strong>Types:</strong></p>
+        <ul class="list-disc pl-5">
+          <li>Traditional: TV, radio, print ads, billboards, events</li>
+          <li>Digital: Social media, SEO, email, websites, influencer marketing</li>
+        </ul>
+        <p><strong>The 4Ps of Marketing:</strong></p>
+        <ul class="list-disc pl-5">
+          <li>Product: What you sell (features, design, quality, branding)</li>
+          <li>Price: What the customer pays (strategy, discounts, offers)</li>
+          <li>Place: Where/how it’s delivered (stores, online, channels)</li>
+          <li>Promotion: How you communicate (advertising, PR, sales, social media)</li>
+        </ul>
+        <p><strong>Importance:</strong> Creates awareness, increases sales, builds loyalty, drives growth.</p>
+      </div>
 
-    function PracticalSection() {
-      return (
-        <section className="py-8 px-4 bg-gray-200">
-          <h2 className="text-2xl font-semibold text-center mb-6">Practical (1.5 Hours)</h2>
-          <div className="max-w-4xl mx-auto grid gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">1. Create a Marketing Persona (15 mins)</h3>
-              <p>Choose a product/service and define its target audience (demographics, psychographics).</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">2. Design a Mini Marketing Plan (30 mins)</h3>
-              <p>Pick a brand, set goals, select channels (Instagram, YouTube), and outline 4Ps.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">3. Social Media Campaign Simulation (20 mins)</h3>
-              <p>Create 2–3 posts with hashtags and captions using Canva or Figma.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">4. Analytics & Insights (15 mins)</h3>
-              <p>Analyze mockup reports (Google Analytics, Instagram Insights) and interpret metrics.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">5. Quick Group Presentation (10 mins)</h3>
-              <p>Present your campaign idea and marketing plan, receive peer feedback.</p>
-            </div>
-          </div>
-        </section>
-      );
-    }
+      <!-- Understanding Target Market & Segmentation -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">2. Understanding Target Market & Segmentation (15 mins)</h3>
+        <p><strong>Target Market:</strong> A specific group of consumers you aim to reach.</p>
+        <p><strong>Segmentation Types:</strong></p>
+        <ul class="list-disc pl-5">
+          <li>Demographic: Age, gender, income, education, occupation</li>
+          <li>Geographic: Region, country, climate, city size</li>
+          <li>Psychographic: Lifestyle, personality, values, interests</li>
+          <li>Behavioral: Buying behavior, usage rate, loyalty, benefits sought</li>
+        </ul>
+        <p><strong>Buyer Personas:</strong> Fictional profiles of ideal customers.</p>
+        <p><strong>Example:</strong> Techie Tom, 22, gamer, uses Instagram/YouTube, waits for sales.</p>
+      </div>
 
-    function Footer() {
-      return (
-        <footer className="bg-blue-600 text-white py-4 text-center">
-          <p>Created for Marketing Workshop | Deployed on Netlify</p>
-        </footer>
-      );
-    }
+      <!-- Marketing Strategies -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">3. Marketing Strategies (20 mins)</h3>
+        <p><strong>Inbound Marketing:</strong> Attracts customers via content (blogging, SEO, social media).</p>
+        <p><strong>Outbound Marketing:</strong> Pushes messages (TV/radio ads, cold calling, email blasts).</p>
+        <p><strong>Other Strategies:</strong></p>
+        <ul class="list-disc pl-5">
+          <li>Content Marketing: Blogs, videos, infographics, podcasts</li>
+          <li>Influencer Marketing: Collaborating with popular personalities</li>
+          <li>Social Media Marketing: Engaging on Instagram, X, LinkedIn</li>
+          <li>SEO: Organic traffic via search engines</li>
+          <li>SEM: Paid traffic via Google Ads, Bing Ads</li>
+        </ul>
+      </div>
 
-    function App() {
-      return (
-        <div>
-          <Header />
-          <TheorySection />
-          <PracticalSection />
-          <Footer />
-        </div>
-      );
-    }
+      <!-- Marketing Funnel & Customer Journey -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">4. Marketing Funnel & Customer Journey (20 mins)</h3>
+        <p><strong>Funnel Stages:</strong> Awareness → Interest → Decision → Action.</p>
+        <p><strong>AIDA Model:</strong></p>
+        <ul class="list-disc pl-5">
+          <li>Attention: Capture interest (ads, viral content)</li>
+          <li>Interest: Engage (blogs, demos)</li>
+          <li>Desire: Show value (reviews, offers)</li>
+          <li>Action: Convert (buy now, checkout)</li>
+        </ul>
+        <p><strong>Customer Journey:</strong> Awareness, Consideration, Purchase, Retention, Advocacy.</p>
+      </div>
 
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
-  </script>
+      <!-- Branding & Positioning -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">5. Branding & Positioning (10 mins)</h3>
+        <p><strong>Branding:</strong> Creating a unique identity (name, logo, values).</p>
+        <p><strong>Positioning:</strong> Placing your brand in customers’ minds vs. competitors.</p>
+        <p><strong>USP:</strong> Unique Selling Proposition (what makes you different).</p>
+        <p><strong>Positioning Strategies:</strong> Price-based, quality-based, usage-based, user-based, competitor-based.</p>
+      </div>
+
+      <!-- Analytics and Metrics -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">6. Analytics and Metrics (10 mins)</h3>
+        <p><strong>Metrics:</strong></p>
+        <ul class="list-disc pl-5">
+          <li>ROI: Profit vs. marketing spend</li>
+          <li>Conversion Rate: % of users taking action</li>
+          <li>Click-Through Rate (CTR): % clicking ads/links</li>
+          <li>Bounce Rate: % leaving site without interaction</li>
+        </ul>
+        <p><strong>Importance:</strong> Data-driven marketing optimizes campaigns.</p>
+        <p><strong>Tools:</strong> Google Analytics, Meta Business Suite, HubSpot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical Section -->
+  <section class="py-8 px-4 bg-gray-200">
+    <h2 class="text-2xl font-semibold text-center mb-6">Practical (1.5 Hours)</h2>
+    <div class="max-w-4xl mx-auto grid gap-6">
+      <!-- Create a Marketing Persona -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">1. Create a Marketing Persona (15 mins)</h3>
+        <p>Choose a product/service and define its target audience.</p>
+        <p><strong>Task:</strong> Create a persona with demographics (age, gender, location) and psychographics (interests, values).</p>
+        <p><strong>Example:</strong> Riya Sharma, 24, MCA student, goals: IT job, uses YouTube/LinkedIn.</p>
+      </div>
+
+      <!-- Design a Mini Marketing Plan -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">2. Design a Mini Marketing Plan (30 mins)</h3>
+        <p><strong>Steps:</strong></p>
+        <ul class="list-disc pl-5">
+          <li>Pick a product/brand</li>
+          <li>Define SMART goals (e.g., 500 app downloads)</li>
+          <li>Choose channels (Instagram, YouTube, email)</li>
+          <li>Outline 4Ps: Product, Price, Place, Promotion</li>
+        </ul>
+        <p><strong>Example:</strong> Meal delivery app for students, promoted via Instagram ads and campus stalls.</p>
+      </div>
+
+      <!-- Social Media Campaign Simulation -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">3. Social Media Campaign Simulation (20 mins)</h3>
+        <p><strong>Task:</strong> Create 2–3 posts for a campaign using Canva/Figma.</p>
+        <p><strong>Include:</strong> Hashtags, captions, target platform (e.g., Instagram, X).</p>
+        <p><strong>Scenarios:</strong> College fest, food startup, EdTech app, or social cause.</p>
+      </div>
+
+      <!-- Analytics & Insights -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">4. Analytics & Insights (15 mins)</h3>
+        <p><strong>Task:</strong> Analyze mockup reports (Google Analytics, Instagram Insights).</p>
+        <p><strong>Example:</strong> Instagram campaign with 12,000 reach, 110 likes, 4 comments (weak engagement).</p>
+        <p>Interpret metrics like CTR, bounce rate, conversion rate.</p>
+      </div>
+
+      <!-- Quick Group Presentation -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2">5. Quick Group Presentation (10 mins)</h3>
+        <p><strong>Task:</strong> Present your campaign idea and marketing plan.</p>
+        <p>Receive peer feedback and wrap up.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white py-4 text-center">
+    <p>3-Hour Marketing Workshop | Ready for Deployment</p>
+  </footer>
 </body>
 </html>
